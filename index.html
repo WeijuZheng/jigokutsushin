@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jigokutsushin</title>
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="icon" href="./img/icon.jpg" type="image/x-icon">
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+</head>
+<body>
+    <div class="test">
+        <img id="flame" src="./img/flame.gif"></img>
+    </div>
+
+    <script>
+        $(".test").delay(2000).fadeOut(1000);
+    </script>
+
+    <div class="container">
+        <img id="banner" src="./img/banner.png">
+        <form id="input_form">
+            <input id="input" autocomplete="off">
+        </form>
+
+        <script>
+            function play() {
+              var audio = document.getElementById("audio");
+              audio.play();
+              setTimeout( function() { window.location = "./pages/conform.html" }, 1600 ); 
+            }
+          </script>
+
+        <button id="button" onclick=play()>
+            送信
+        </button>
+        <audio id="audio" src="./sound/button.mp3"></audio>
+    </div>
+
+</body>
+</html>
